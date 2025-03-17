@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/step-symbol/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,yBAAyB,EAAE,MAAM,sBAAsB,CAAC;AACjE,OAAO,EAAE,UAAU,EAAE,MAAM,eAAe,CAAC;AAC3C,YAAY,EACV,eAAe,EACf,eAAe,EACf,eAAe,GAChB,MAAM,qBAAqB,CAAC;AAC7B,OAAO,EAAE,sBAAsB,EAAE,MAAM,mBAAmB,CAAC;AAC3D,OAAO,EACL,oBAAoB,EACpB,4BAA4B,GAC7B,MAAM,0BAA0B,CAAC"}
