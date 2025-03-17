@@ -12,7 +12,7 @@ export type StepperDialogProps = {
     cancelLabel?: string;
     nextLabel?: string;
     previousLabel?: string;
-    finishLabel: string;
+    finishLabel?: string;
     disableProgression?: boolean;
     className?: string;
 };

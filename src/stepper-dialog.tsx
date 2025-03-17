@@ -75,7 +75,7 @@ export const StepperDialog = ({
               {nextLabel}
             </Button>
           )}
-          {currentStep === steps.length - 1 && (
+          {currentStep === steps.length - 1 && finishLabel && (
             <Button
               className={buttonFinish}
               onClick={onFinish}
