@@ -1,13 +1,8 @@
 {
   "name": "@axiscommunications/fluent-stepper",
-  "version": "11.0.0-alpha.0",
+  "version": "11.0.0",
   "description": "Stepper for Fluent UI v9",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/opteon-sdc/axiscommunications-fluent-stepper"
-  },
   "license": "MIT",
-  "author": "Axis Communications AB",
   "type": "module",
   "exports": {
     ".": {
