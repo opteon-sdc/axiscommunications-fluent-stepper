@@ -1,5 +1,5 @@
 import { Button } from "@fluentui/react-components";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Stepper } from "./stepper";
 import { useStepperDialogStyles } from "./stepper-dialog.styles";
 import { StepperDialogProps } from "./stepper-dialog.types";
@@ -32,31 +32,27 @@ export const StepperDialog = ({
 
   const onNext = useCallback(
     () => {
-		var steps = document.getElementsByClassName('axis-Step')
-		console.log("On next: ", steps)
-		if (steps) {
-			if (steps.length > 0) {
-				steps[currentStep + 1].scrollIntoView();
-			}
-		}
-
 		onStepChange(currentStep + 1);
 	},
     [currentStep, onStepChange]
   );
   const onPrevious = useCallback(
     () => {
-		var steps = document.getElementsByClassName('axis-Step')
-		console.log("On previous: ", steps)
-		if (steps) {
-			if (steps.length > 0) {
-				steps[currentStep - 1].scrollIntoView();
-			}
-		}
 		onStepChange(currentStep - 1)
 	},
     [currentStep, onStepChange]
   );
+
+
+  useEffect(() => {
+		var steps = document.getElementsByClassName('axis-Step')
+		console.log("On curren step change: ", steps)
+		if (steps) {
+			if (steps.length > 0) {
+				steps[currentStep].scrollIntoView();
+			}
+		}
+  }, [currentStep])
 
   return (
     <div className={rootStyles}>

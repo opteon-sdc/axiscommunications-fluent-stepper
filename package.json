@@ -1,6 +1,6 @@
 {
   "name": "@axiscommunications/fluent-stepper",
-  "version": "11.0.4",
+  "version": "11.0.5",
   "description": "Stepper for Fluent UI v9",
   "license": "MIT",
   "type": "module",
