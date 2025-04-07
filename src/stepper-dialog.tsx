@@ -32,26 +32,28 @@ export const StepperDialog = ({
 
   const onNext = useCallback(
     () => {
-		onStepChange(currentStep + 1);
-
 		var steps = document.getElementsByClassName('axis-Step')
+		console.log("On next: ", steps)
 		if (steps) {
 			if (steps.length > 0) {
-				steps[currentStep + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				steps[currentStep + 1].scrollIntoView();
 			}
 		}
+
+		onStepChange(currentStep + 1);
 	},
     [currentStep, onStepChange]
   );
   const onPrevious = useCallback(
     () => {
-		onStepChange(currentStep - 1)
 		var steps = document.getElementsByClassName('axis-Step')
+		console.log("On previous: ", steps)
 		if (steps) {
 			if (steps.length > 0) {
-				steps[currentStep - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				steps[currentStep - 1].scrollIntoView();
 			}
 		}
+		onStepChange(currentStep - 1)
 	},
     [currentStep, onStepChange]
   );
