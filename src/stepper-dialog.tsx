@@ -31,11 +31,28 @@ export const StepperDialog = ({
   } = useStepperDialogStyles({ vertical, className });
 
   const onNext = useCallback(
-    () => onStepChange(currentStep + 1),
+    () => {
+		onStepChange(currentStep + 1);
+
+		var steps = document.getElementsByClassName('axis-Step')
+		if (steps) {
+			if (steps.length > 0) {
+				steps[currentStep + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			}
+		}
+	},
     [currentStep, onStepChange]
   );
   const onPrevious = useCallback(
-    () => onStepChange(currentStep - 1),
+    () => {
+		onStepChange(currentStep - 1)
+		var steps = document.getElementsByClassName('axis-Step')
+		if (steps) {
+			if (steps.length > 0) {
+				steps[currentStep - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			}
+		}
+	},
     [currentStep, onStepChange]
   );
 
