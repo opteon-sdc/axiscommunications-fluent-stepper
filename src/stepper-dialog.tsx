@@ -42,7 +42,7 @@ export const StepperDialog = ({
   return (
     <div className={rootStyles}>
       <div className={containerStyles}>
-        <div>
+        <div className="lungbeat-dialog-stepper-container" style={{ width: '100%', overflowX: 'auto'}}>
           <Stepper
             currentStep={currentStep}
             steps={steps}
