@@ -64,7 +64,9 @@ export const StepperDialog = ({
             vertical={vertical}
           />
         </div>
-        <div className={contentStyles}>{steps[currentStep].content}</div>
+        <div className={contentStyles}>{
+			(steps[currentStep].content) && (steps[currentStep].content)
+		}</div>
       </div>
       <div className={buttonContainerStyles}>
         <div className={buttonStyles}>
