@@ -46,9 +46,8 @@ export const StepperDialog = ({
 
   useEffect(() => {
 		var steps = document.getElementsByClassName('axis-Step')
-		console.log("On curren step change: ", steps)
 		if (steps) {
-			if (steps.length > 0) {
+			if (steps.length > 0 && steps[currentStep] !== undefined) {
 				steps[currentStep].scrollIntoView();
 			}
 		}
